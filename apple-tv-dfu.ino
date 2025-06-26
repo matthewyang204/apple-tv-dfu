@@ -31,9 +31,12 @@ void loop() {
         Serial.println(randomNumber);
         delay(shortBreak);
         turnOn();
-        
-        //Your logic goes here...
-        //You can use the random number to select e.g. an episode of you favorite TV series.
+
+        Serial.println("Now putting the Apple TV into DFU mode, please power on Apple TV and wait...");
+        while (true) {
+          menu();
+          play();
+        }
         
         Serial.println("Navigation process finished.");
     }
